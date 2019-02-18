@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tab4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card class="welcome-card" *ngFor='let group of groups'>
+        <ion-img [src]="group.avatar_url || 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'"></ion-img>
+        <ion-card-header>
+          <ion-card-subtitle>{{ group.web_url }}</ion-card-subtitle>
+          <ion-card-title>{{ group.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ group.description }}</p>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
